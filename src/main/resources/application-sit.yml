@@ -4,10 +4,10 @@ server:
 spring:
   kafka:
     consumer:
-      bootstrap-servers: 10.0.1.18:9092
+      bootstrap-servers: 10.0.1.18:9092,10.0.1.19:9092
       # 配置消费者消息offset是否自动重置(消费者重连会能够接收最开始的消息)
       auto-offset-reset: earliest
     producer:
-      bootstrap-servers: 10.0.1.18:9092
+      bootstrap-servers: 10.0.1.18:9092,10.0.1.19:9092
       # 发送的对象信息变为json格式
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
